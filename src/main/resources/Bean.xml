@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd"
+        default-init-method="init"
+        default-destroy-method="destroy">
+
+<context:annotation-config/>
+<!-- instead of congfig in the bean directly we can declear deafult-init-method and default-destroy-method  -->
+<!-- 	<bean id="student" class="com.SpringDAO.StudentDAO" init-method="init" destroy-method="destroy ">-->
+	<!-- <bean id="student" class="com.SpringDAO.StudentDAO" >
+		<property name="driver" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/jdbcdb" />
+		<property name="UserName" value="root" />
+		<property name="passWord" value="Admin@123" />
+	</ bean>-->
+	
+	<!-- <context:annotation-config/> -->
+<!-- instead of this we can use this annotation-->	
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
+
+<bean id="hello" class="com.SpringDAO.Hello"></bean>
+</beans>
